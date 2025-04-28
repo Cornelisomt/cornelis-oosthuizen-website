@@ -12,7 +12,7 @@ const Testimonials = () => {
             Don't just take our word for it. Hear from people who've experienced the difference firsthand.
           </p>
           <a
-            href="https://www.google.com/business"
+            href="https://www.google.com/maps/place/Cornelis+Massage+Therapy/@-26.1330321,28.0012787,17z/data=!4m8!3m7!1s0x1e950c60013770c3:0x9c908c9cfd688c0c!8m2!3d-26.13304!4d28.0038536!9m1!1b1!16s%2Fg%2F11t82_8hvj?entry=ttu"
             target="_blank"
             rel="noopener noreferrer"
             className="text-massage-primary hover:underline inline-block mt-4"
