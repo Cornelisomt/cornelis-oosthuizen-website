@@ -12,7 +12,7 @@ const Testimonials = () => {
             Don't just take our word for it. Hear from people who've experienced the difference firsthand.
           </p>
           <a
-            href="https://www.google.com/maps/place/Cornelis+Massage+Therapy/@-26.1330321,28.0012787,17z/data=!4m8!3m7!1s0x1e950c60013770c3:0x9c908c9cfd688c0c!8m2!3d-26.13304!4d28.0038536!9m1!1b1!16s%2Fg%2F11t82_8hvj?entry=ttu"
+            href="https://www.google.com/search?sca_esv=da1b8a09527d5d5c&biw=1920&bih=945&sxsrf=AHTn8zpfBNqzbee3Vcwk-k21AKPJd-TfIQ:1745826013087&si=APYL9bs7Hg2KMLB-4tSoTdxuOx8BdRvHbByC_AuVpNyh0x2KzZeepBK2fnXU7PqUEiA-JD4wGsAGcv5hJwavBU3II-Ir0QYdpzvcTGCvKy-wxwBWsHHjuOWjdQkYWredKE_nF72AxpZ_N8qfMBgFtOb8md_U6BV4lUbhuX0gnbiqdpZAJeqgbjo%3D&q=Cornelis+Oosthuizen+Massage+Therapy+Reviews&sa=X&ved=2ahUKEwjt7uXanPqMAxXyREEAHV6PFQ8Q0bkNegQIIRAD"
             target="_blank"
             rel="noopener noreferrer"
             className="text-massage-primary hover:underline inline-block mt-4"
@@ -23,19 +23,22 @@ const Testimonials = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <TestimonialCard 
-            name="Sarah M."
-            quote="After struggling with lower back pain for months, I found real relief after just a few sessions. The focus on root causes rather than just symptoms made all the difference."
+            name="Jacques Pienaar"
+            quote="Extremely professional, highly knowledgeable and competent. Looking forward to work with him going forward."
             rating={5}
+            date="3 months ago"
           />
           <TestimonialCard 
-            name="James T."
-            quote="As an avid runner, I've tried many massage therapists over the years. This approach is different - thoughtful, thorough, and actually focused on long-term improvement."
+            name="Javier Gameiro"
+            quote="Cornelis is incredibly knowledgeable about massage therapy and sports injuries. His technique is precise and effective."
             rating={5}
+            date="3 months ago"
           />
           <TestimonialCard 
-            name="Priya K."
-            quote="The full body relaxation massage was exactly what I needed during a particularly stressful time. I left feeling renewed and balanced in a way I hadn't experienced before."
+            name="Stephani Venter"
+            quote="Excellent service! Very knowledgeable and professional."
             rating={5}
+            date="6 months ago"
           />
         </div>
       </div>
@@ -47,9 +50,10 @@ interface TestimonialCardProps {
   name: string;
   quote: string;
   rating: number;
+  date: string;
 }
 
-const TestimonialCard = ({ name, quote, rating }: TestimonialCardProps) => (
+const TestimonialCard = ({ name, quote, rating, date }: TestimonialCardProps) => (
   <Card className="h-full card-shadow">
     <CardHeader>
       <div className="flex mb-2">
@@ -60,7 +64,10 @@ const TestimonialCard = ({ name, quote, rating }: TestimonialCardProps) => (
     </CardHeader>
     <CardContent>
       <p className="italic mb-4">"{quote}"</p>
-      <p className="font-medium">— {name}</p>
+      <div className="flex flex-col gap-1">
+        <p className="font-medium">— {name}</p>
+        <p className="text-sm text-gray-500">{date}</p>
+      </div>
     </CardContent>
   </Card>
 );
