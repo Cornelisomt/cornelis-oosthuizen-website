@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
 import { Phone, Mail, MapPin, MessageSquare, Calendar } from "lucide-react";
+
 const Contact = () => {
   const {
     toast
@@ -59,10 +60,7 @@ const Contact = () => {
                 <MapPin className="h-6 w-6 text-massage-primary flex-shrink-0 mt-1" />
                 <div>
                   <p className="font-medium mb-1">Address:</p>
-                  <p>94 6th Street, Linden<br />Johannesburg, 2195</p>
-                  <p className="text-sm text-massage-dark/70 mt-2">
-                    Studio Address:<br />Block B, 457 Jan Smuts Ave, Blairgowrie, Randburg, 2194
-                  </p>
+                  <p>Block B, 457 Jan Smuts Ave<br />Blairgowrie, Randburg, 2194</p>
                 </div>
               </div>
               
