@@ -1,10 +1,9 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
-import { Phone, Mail, MapPin, WhatsApp, Calendar } from "lucide-react";
+import { Phone, Mail, MapPin, MessageSquare, Calendar } from "lucide-react";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -22,7 +21,6 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Form submission logic would go here
     toast({
       title: "Message sent!",
       description: "We'll get back to you as soon as possible.",
@@ -86,7 +84,7 @@ const Contact = () => {
                   onClick={handleWhatsApp} 
                   className="w-full bg-green-500 hover:bg-green-600 flex items-center gap-2"
                 >
-                  <WhatsApp className="h-5 w-5" />
+                  <MessageSquare className="h-5 w-5" />
                   Chat on WhatsApp
                 </Button>
                 
