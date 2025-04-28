@@ -89,7 +89,12 @@ const Contact = () => {
                 </Button>
                 
                 <Button asChild className="w-full bg-massage-primary hover:bg-massage-primary/90 flex items-center gap-2">
-                  <a href="#" className="flex items-center gap-2">
+                  <a 
+                    href="https://calendly.com/cornelismassagetherapy" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2"
+                  >
                     <Calendar className="h-5 w-5" />
                     Book an Appointment
                   </a>

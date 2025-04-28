@@ -14,7 +14,7 @@ const Hero = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild className="btn-primary" size="lg">
-              <a href="#contact">Book a Session</a>
+              <a href="https://calendly.com/cornelismassagetherapy" target="_blank" rel="noopener noreferrer">Book a Session</a>
             </Button>
             <Button asChild className="btn-secondary" size="lg">
               <a href="#services">Explore Services</a>
