@@ -1,15 +1,11 @@
-
 import { Mail, MapPin, Phone } from "lucide-react";
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
-  return (
-    <footer className="bg-massage-dark text-white pt-12 pb-8">
+  return <footer className="bg-massage-dark text-white pt-12 pb-8">
       <div className="container-padding">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
-            <h3 className="text-xl font-semibold mb-4">Healing Touch</h3>
+            <h3 className="text-xl font-semibold mb-4">Cornelis Oosthuizen Massage Therapy</h3>
             <p className="text-white/80 mb-4">
               Specialized massage therapy focused on helping you reclaim strength, mobility, and peace of mind.
             </p>
@@ -77,8 +73,6 @@ const Footer = () => {
           <p>© {currentYear} Cornelis Oosthuizen Massage Therapy. All rights reserved.</p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
