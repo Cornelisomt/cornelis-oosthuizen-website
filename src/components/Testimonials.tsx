@@ -1,8 +1,20 @@
 
-import { Star } from 'lucide-react';
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { useEffect } from 'react';
 
 const Testimonials = () => {
+  useEffect(() => {
+    // Load Elfsight script dynamically
+    const script = document.createElement('script');
+    script.src = "https://static.elfsight.com/platform/platform.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      // Clean up script when component unmounts
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <section id="testimonials" className="section-padding bg-white">
       <div className="container-padding">
@@ -21,55 +33,10 @@ const Testimonials = () => {
           </a>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <TestimonialCard 
-            name="Jacques Pienaar"
-            quote="Extremely professional, highly knowledgeable and competent. Looking forward to work with him going forward."
-            rating={5}
-            date="3 months ago"
-          />
-          <TestimonialCard 
-            name="Javier Gameiro"
-            quote="Cornelis is incredibly knowledgeable about massage therapy and sports injuries. His technique is precise and effective."
-            rating={5}
-            date="3 months ago"
-          />
-          <TestimonialCard 
-            name="Stephani Venter"
-            quote="Excellent service! Very knowledgeable and professional."
-            rating={5}
-            date="6 months ago"
-          />
-        </div>
+        <div className="elfsight-app-1b1390e1-8f4a-45ba-967d-107f466ed799" data-elfsight-app-lazy></div>
       </div>
     </section>
   );
 };
-
-interface TestimonialCardProps {
-  name: string;
-  quote: string;
-  rating: number;
-  date: string;
-}
-
-const TestimonialCard = ({ name, quote, rating, date }: TestimonialCardProps) => (
-  <Card className="h-full card-shadow">
-    <CardHeader>
-      <div className="flex mb-2">
-        {Array.from({ length: rating }).map((_, i) => (
-          <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-        ))}
-      </div>
-    </CardHeader>
-    <CardContent>
-      <p className="italic mb-4">"{quote}"</p>
-      <div className="flex flex-col gap-1">
-        <p className="font-medium">— {name}</p>
-        <p className="text-sm text-gray-500">{date}</p>
-      </div>
-    </CardContent>
-  </Card>
-);
 
 export default Testimonials;
