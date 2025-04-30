@@ -2,6 +2,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
+import { ExternalLink } from "lucide-react";
 
 const Pricing = () => {
   return (
@@ -42,6 +43,64 @@ const Pricing = () => {
             </div>
           </TabsContent>
         </Tabs>
+        
+        {/* Home Visit Options Section */}
+        <div className="max-w-4xl mx-auto mt-16">
+          <div className="border-t border-massage-primary/20 pt-12">
+            <h3 className="heading-tertiary text-center mb-6">Home Visit Options</h3>
+            <p className="text-body mb-8 text-center">
+              For clients who prefer the comfort of home, we offer professional massage visits within a 10km radius of our studio.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row justify-between items-start gap-8 max-w-2xl mx-auto mb-8">
+              <div className="bg-white p-6 rounded-lg card-shadow flex-1">
+                <h4 className="font-semibold text-lg mb-6 text-massage-primary">Travel Charges</h4>
+                <ul className="space-y-3 mb-6">
+                  <li className="flex items-start">
+                    <span className="text-massage-primary mr-2 font-bold">•</span>
+                    <span>Within 5km – <span className="font-semibold text-massage-primary">R150</span></span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-massage-primary mr-2 font-bold">•</span>
+                    <span>Within 10km – <span className="font-semibold text-massage-primary">R200</span></span>
+                  </li>
+                </ul>
+                
+                <Button 
+                  variant="outline" 
+                  className="border-massage-primary text-massage-primary hover:bg-massage-primary hover:text-white flex items-center"
+                  asChild
+                >
+                  <a 
+                    href="https://maps.googleapis.com/maps/api/staticmap?size=600x500&path=fillcolor:0x006eff|weight:3|color:0xffffff|enc:f|w}C_m~iDh@uj@bCmj@xEaj@nHki@bKqh@tMog@dPgf@rRyd@|Tgc@dWma@fYm_@d[k]]a[v^uXf@cVra@qSzb@wPzc@}Mtd@aKje@aHze@aEbf@aBff@?bf@Bxe@Eje@Hvd@Kzc@|Mxb@vPra@pSh@bVv^tX~\[f[j]fYl_@bWla@|Tfc@rRxd@dPff@vMng@bKph@lHji@xEj@bClj@j@tj@k@rj@cClj@yEj@mHji@cKph@wMng@ePff@sRzd@}Tdc@cWla@gYl_@g[j]_][w^tXi@dVsa@nSyb@vP{c@|Mwd@Kke@Hye@bEcf@~Agf@?cf@_B{e@cEke@aHud@aK{c@}M{b@wPsa@oSg@eVw^uXa]a[e[k]gYm_@eWma@}Tec@sR{d@ePgf@uMog@cKqh@oHki@yEaj@cCmj@i@sj@&path=fillcolor:0x006eff|weight:3|color:0xffffff|enc:du~Ckm~iDTyTAwTjBoTvCeTEySjFgSrGsRvH}Q~IaQKgPbLeObMeN~MaMzNyKtOsJhPgIzP{GlQmFzQaEdRoClRaBpRo@rR?pRn@lRBdRnCxQElQlF|PzGhPfIrOrJzNxKNMMdNbLdObKfP|IQxH|QrGrRhFfSExSvCdTlBnT~@vTTxTUxT_AvTmBnTwCdTaExSiFfSsGrRyHzQ}IbQcKfPcLdOaMdNaNM{NxKsOrJiPfI}PzGmQlFyQEeRnCmRBqRn@sR?qRo@mRaBeRoC{QaEmQmF{P{GiPgIuOsJ{NyK_NaMcMeNcLeOaKgP_JcQwH{QsGsRkFgSaEySwCeTkBoTaAwTUyT&key=AIzaSyB9Wp3xHL6DdpiVUAFDDZXV1viLjTvs784" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View Service Area Map <ExternalLink className="ml-1 h-4 w-4" />
+                  </a>
+                </Button>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg card-shadow flex-1">
+                <h4 className="font-semibold text-lg mb-4 text-massage-primary">Home Visit Notes</h4>
+                <ul className="space-y-3 text-sm">
+                  <li className="flex items-start">
+                    <span className="text-massage-primary mr-2 font-bold">•</span>
+                    <span>Travel charges are added to the standard session rates</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-massage-primary mr-2 font-bold">•</span>
+                    <span>Please provide a clean, quiet space with room for our massage table</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-massage-primary mr-2 font-bold">•</span>
+                    <span>Bookings require 24-hour advance notice</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
