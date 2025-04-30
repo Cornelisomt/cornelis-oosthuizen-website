@@ -2,10 +2,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
-
 const Pricing = () => {
-  return (
-    <section id="prices" className="section-padding bg-massage-light/50">
+  return <section id="prices" className="section-padding bg-massage-light/50">
       <div className="container-padding">
         <div className="text-center mb-12">
           <h2 className="heading-secondary">Pricing & Packages</h2>
@@ -65,14 +63,7 @@ const Pricing = () => {
                   </li>
                 </ul>
                 
-                <a 
-                  href="https://maps.googleapis.com/maps/api/staticmap?center=-26.112879%2C28.01827&zoom=13&size=600x500&maptype=roadmap&markers=color:red%7Clabel:C%7C-26.112879%2C28.01827&path=fillcolor:0x006eff44|color:0x006eff88|weight:2|-26.06774831965799,28.01827|-26.067995456422853,28.023493288211817|-26.06873416207704,28.028659414202355|-26.06995635219947,28.033711839188577|-26.071648650771266,28.038595264556967|-26.073792536092345,28.043256235248958|-26.076364542860226,28.04764372329756|-26.079336518234367,28.051709685214497|-26.082675929124676,28.055409587194426|-26.08634621738806,28.058702892433566|-26.090307199095584,28.06155350524989|-26.094515503550937,28.063930167140203|-26.09892504730467,28.065806800409817|-26.103487538021607,28.067162795559952|-26.108153002726056,28.067983239212257|-26.11287033467483,28.06825907998046|-26.11758785289478,28.067987230364583|-26.122253868271788,28.06717060343232|-26.12681724999573,28.065818083761148|-26.13122798614969,28.063944432834486&path=fillcolor:0x33cc3344|color:0x33cc3388|weight:2|-26.159617639315978,28.01827|-26.159966087055707,28.027064981640294|-26.16101096258723,28.03579872428059|-26.16274730019126,28.044411024738004|-26.16516640154246,28.052843145186466|-26.168255905765335,28.06103855912299|-26.171999031062874,28.06894362214173|-26.176374894126683,28.0765082875273|-26.181358897080237,28.08368671806624|-26.186922251007315,28.090437883372544|-26.19303258605117,28.096725093888474|-26.19965463280619,28.10251649817489|-26.206750941946174,28.10778561573231|-26.214282694802464,28.112511748842146|-26.22221057489192,28.11667934732969|-26.23049563758198,28.120278340223583&key=AIzaSyB9Wp3xHL6DdpiVUAFDDZXV1viLjTvs784" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-block py-2 px-4 bg-[#006eff] text-white rounded-md hover:bg-[#006eff]/90 transition-colors font-medium flex items-center"
-                >
-                  View Service Areas <ExternalLink className="ml-1 h-4 w-4" />
-                </a>
+                
               </div>
               
               <div className="bg-white p-6 rounded-lg card-shadow flex-1">
@@ -96,24 +87,23 @@ const Pricing = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 interface PriceCardProps {
   title: string;
   price: string;
   description: string;
   popular?: boolean;
 }
-
-const PriceCard = ({ title, price, description, popular = false }: PriceCardProps) => (
-  <Card className={`card-shadow ${popular ? 'border-2 border-massage-primary relative' : ''}`}>
-    {popular && (
-      <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-massage-primary text-white text-sm font-medium py-1 px-3 rounded-full">
+const PriceCard = ({
+  title,
+  price,
+  description,
+  popular = false
+}: PriceCardProps) => <Card className={`card-shadow ${popular ? 'border-2 border-massage-primary relative' : ''}`}>
+    {popular && <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-massage-primary text-white text-sm font-medium py-1 px-3 rounded-full">
         Most Popular
-      </div>
-    )}
+      </div>}
     <CardHeader className="text-center pb-4">
       <CardTitle>{title}</CardTitle>
       <CardDescription className="text-massage-dark/80">{description}</CardDescription>
@@ -124,7 +114,5 @@ const PriceCard = ({ title, price, description, popular = false }: PriceCardProp
         <a href="#contact">Book Now</a>
       </Button>
     </CardContent>
-  </Card>
-);
-
+  </Card>;
 export default Pricing;
