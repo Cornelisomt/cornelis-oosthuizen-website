@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -39,7 +40,7 @@ const Contact = () => {
     });
   };
   const handleWhatsApp = () => {
-    window.open(`https://wa.me/0774849149?text=Hello%2C%20I%27d%20like%20to%20inquire%20about%20massage%20therapy%20services.`, "_blank");
+    window.open(`https://wa.me/27774849149?text=Hello%2C%20I%27d%20like%20to%20inquire%20about%20massage%20therapy%20services.`, "_blank");
   };
   return <section id="contact" className="section-padding bg-white">
       <div className="container-padding">
