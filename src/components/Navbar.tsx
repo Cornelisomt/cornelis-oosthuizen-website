@@ -10,12 +10,7 @@ const Navbar = () => {
   return <nav className="bg-white py-4 sticky top-0 z-50 shadow-sm">
       <div className="container-padding flex justify-between items-center">
         <a href="#" className="flex items-center gap-2 text-2xl font-bold text-massage-primary">
-          <img 
-            src="/public/lovable-uploads/6c3a95d0-17e4-4088-8f23-c2455090662a.png" 
-            alt="Cornelis Oosthuizen Massage Therapy Logo" 
-            className="h-10 w-auto"
-          />
-          <span className="hidden sm:inline">Cornelis Oosthuizen Massage Therapy</span>
+          <span>Cornelis Oosthuizen Massage Therapy</span>
         </a>
 
         {/* Desktop Navigation */}
