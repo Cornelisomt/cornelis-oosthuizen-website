@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
@@ -111,7 +112,7 @@ const PriceCard = ({
     <CardContent className="text-center pt-0">
       <p className="text-3xl font-bold text-massage-primary mb-6">{price}</p>
       <Button asChild className="w-full bg-massage-primary hover:bg-massage-primary/90">
-        <a href="#contact">Book Now</a>
+        <a href="https://calendly.com/cornelismassagetherapy/full-body-massage" target="_blank" rel="noopener noreferrer">Book Now</a>
       </Button>
     </CardContent>
   </Card>;

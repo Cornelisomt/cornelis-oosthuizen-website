@@ -40,7 +40,7 @@ const Contact = () => {
     });
   };
   const handleWhatsApp = () => {
-    window.open(`https://wa.me/27774849149?text=Hello%2C%20I%27d%20like%20to%20inquire%20about%20massage%20therapy%20services.`, "_blank");
+    window.open(`https://wa.me/+27774849149?text=Hello%2C%20I%27d%20like%20to%20inquire%20about%20massage%20therapy%20services.`, "_blank");
   };
   return <section id="contact" className="section-padding bg-white">
       <div className="container-padding">
@@ -90,7 +90,7 @@ const Contact = () => {
                 </Button>
                 
                 <Button asChild className="w-full bg-massage-primary hover:bg-massage-primary/90 flex items-center gap-2">
-                  <a href="https://calendly.com/cornelismassagetherapy" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                  <a href="https://calendly.com/cornelismassagetherapy/full-body-massage" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                     <Calendar className="h-5 w-5" />
                     Book an Appointment
                   </a>
