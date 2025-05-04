@@ -13,7 +13,7 @@ const Navbar = () => {
           <img 
             src="/public/lovable-uploads/6c3a95d0-17e4-4088-8f23-c2455090662a.png" 
             alt="Cornelis Oosthuizen Massage Therapy Logo" 
-            className="h-10 w-auto"
+            className="h-10 w-auto object-contain mix-blend-multiply"
           />
           <span className="hidden sm:inline">Cornelis Oosthuizen Massage Therapy</span>
         </a>
