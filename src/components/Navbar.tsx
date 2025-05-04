@@ -7,11 +7,16 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
   
-  return <nav className="bg-[#E9E2D0] py-4 sticky top-0 z-50 shadow-sm">
-      <div className="container-padding flex justify-between items-center">
-        <a href="#" className="text-2xl font-bold text-massage-primary">
-          <span>Cornelis Oosthuizen Massage Therapy</span>
-        </a>
+  return (
+  <nav className="bg-[#E9E2D0] py-4 sticky top-0 z-50 shadow-sm">
+    <div className="container-padding flex justify-between items-center">
+      <a href="#" className="text-2xl font-bold text-massage-primary">
+        <span>Cornelis Oosthuizen Massage Therapy</span>
+      </a>
+    </div>
+  </nav>
+);
+
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
