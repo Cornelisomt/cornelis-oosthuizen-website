@@ -11,7 +11,7 @@ const Navbar = () => {
       <div className="container-padding flex justify-between items-center">
         <a href="#" className="flex items-center gap-2 text-2xl font-bold text-massage-primary">
           <img 
-            src="/assets/cornelis-logo.png" 
+            src="cornelis-logo.png" 
             alt="Cornelis Oosthuizen Massage Therapy Logo" 
             className="h-14 w-auto object-contain mix-blend-multiply"
           />
