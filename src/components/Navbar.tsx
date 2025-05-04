@@ -9,13 +9,8 @@ const Navbar = () => {
   
   return <nav className="bg-[#E9E2D0] py-4 sticky top-0 z-50 shadow-sm">
       <div className="container-padding flex justify-between items-center">
-        <a href="#" className="flex items-center gap-2 text-2xl font-bold text-massage-primary">
-          <img 
-            src="cornelis-logo.png" 
-            alt="Cornelis Oosthuizen Massage Therapy Logo" 
-            className="h-14 w-auto object-contain mix-blend-multiply"
-          />
-          <span className="hidden sm:inline">Cornelis Oosthuizen Massage Therapy</span>
+        <a href="#" className="text-2xl font-bold text-massage-primary">
+          <span>Cornelis Oosthuizen Massage Therapy</span>
         </a>
 
         {/* Desktop Navigation */}
