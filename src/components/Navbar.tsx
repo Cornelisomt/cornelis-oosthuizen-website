@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
   
-  return <nav className="bg-white py-4 sticky top-0 z-50 shadow-sm">
+  return <nav className="bg-[#E9E2D0] py-4 sticky top-0 z-50 shadow-sm">
       <div className="container-padding flex justify-between items-center">
         <a href="#" className="flex items-center gap-2 text-2xl font-bold text-massage-primary">
           <img 
@@ -44,7 +44,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Navigation */}
-      {isOpen && <div className="md:hidden bg-white py-4 px-4">
+      {isOpen && <div className="md:hidden bg-[#E9E2D0] py-4 px-4">
           <div className="flex flex-col gap-4">
             <a href="#services" className="text-massage-dark hover:text-massage-primary transition-colors py-2 border-b" onClick={toggleMenu}>
               Services
