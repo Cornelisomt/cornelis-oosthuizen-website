@@ -37,11 +37,12 @@ const Navbar = () => {
           </Button>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button className="md:hidden text-massage-dark" onClick={toggleMenu}>
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
+       {/* Mobile Menu Button */}
+<div className="md:hidden">
+  <button className="text-massage-dark" onClick={toggleMenu}>
+    {isOpen ? <X size={24} /> : <Menu size={24} />}
+  </button>
+</div>
 
       {/* Mobile Navigation */}
       {isOpen && <div className="md:hidden bg-[#E9E2D0] py-4 px-4">
