@@ -77,6 +77,19 @@ const PriceCard = ({
   price,
   popular = false
 }: PriceCardProps) => {
+  const getDescription = (title: string) => {
+    switch (title) {
+      case "30 minutes":
+        return "A targeted session designed to gently lengthen and release specific muscle groups using Active Isolation Stretching (AIS). Ideal for warm-ups, recovery, or unlocking restricted movement in a particular area.";
+      case "60 minutes":
+        return "A full-body fascia release session that restores movement, reduces tension, and supports postural alignment. Includes selected AIS stretches to reinforce fascial hydration and mobility.";
+      case "90 minutes":
+        return "Our most comprehensive session. Combines broad fascia release with extended AIS work for deeper muscular and fascial release. Ideal for recovery, structural rebalancing, or high-stress bodies.";
+      default:
+        return "";
+    }
+  };
+
   return (
     <Card className={`card-shadow ${popular ? 'border-2 border-massage-primary relative' : ''}`}>
       {popular && (
@@ -86,9 +99,17 @@ const PriceCard = ({
       )}
       <CardHeader className="text-center pb-4">
         <CardTitle>{title}</CardTitle>
+        <CardDescription className="text-sm text-massage-dark/70 mt-2">
+          {title === "30 minutes" ? "Active Isolation Stretching Focus" :
+           title === "60 minutes" ? "Fascia Release with added AIS Integration" :
+           title === "90 minutes" ? "Deep Fascia Release with Extended AIS Work" : ""}
+        </CardDescription>
       </CardHeader>
       <CardContent className="text-center pt-0">
-        <p className="text-3xl font-bold text-massage-primary">{price}</p>
+        <p className="text-3xl font-bold text-massage-primary mb-4">{price}</p>
+        <p className="text-sm text-massage-dark/80 text-left leading-relaxed">
+          {getDescription(title)}
+        </p>
       </CardContent>
     </Card>
   );

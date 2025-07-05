@@ -27,13 +27,10 @@ const About = () => {
             <CardContent className="p-8">
               <h3 className="text-xl font-medium text-massage-primary mb-4">My Approach</h3>
               <p className="text-body mb-6">
-                I don't believe in rushing through a session or chasing quick fixes. My approach is slow, intentional, and deeply focused, because real results — especially in sport recovery — come from giving the body the time and consistency it needs to heal and adapt.
-              </p>
-              <p className="text-body mb-6">
-                Instead of trying to do everything at once, I give full attention to the areas that matter most, working methodically to release deep tension and support lasting change.
+                My work is rooted in the understanding that the body is an interconnected system of fascia, not isolated parts. Using the Anatomy Trains framework, I focus on releasing tension along the body's myofascial meridians — long lines of connective tissue that link movement and posture across multiple regions. These fascial lines often hold chronic tension and compensation patterns from past injuries, poor posture, or emotional stress.
               </p>
               <p className="text-body font-medium">
-                It's not just about feeling better today — it's about helping your body perform, recover, and stay strong over time.
+                To restore fluidity and balance, I combine manual fascia release with Active Isolation Stretching (AIS). While fascia release softens restrictions in the tissue network, AIS uses precise, repeated movements to stimulate circulation, rehydrate the fascia, and improve neuromuscular control. This combination allows for deep, lasting change — not just short-term relief — helping the body reorganize itself into a more open, aligned, and pain-free state.
               </p>
             </CardContent>
           </Card>
