@@ -13,8 +13,12 @@ const Hero = () => {
             Experience focused, effective deep tissue massage that helps you move freely and live without the limits of pain and tension.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild className="btn-primary" size="lg">
-              <a href="https://calendly.com/cornelismassagetherapy/full-body-massage" target="_blank" rel="noopener noreferrer">Book a Session</a>
+            <Button 
+              onClick={() => window.open(`https://wa.me/+27774849149?text=Hello%2C%20I%27d%20like%20to%20inquire%20about%20fascia%20release%20therapy%20sessions.`, "_blank")}
+              className="btn-primary" 
+              size="lg"
+            >
+              Book a Session
             </Button>
             <Button asChild className="btn-secondary" size="lg">
               <a href="#services">Explore Services</a>

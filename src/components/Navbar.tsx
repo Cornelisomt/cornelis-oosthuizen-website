@@ -8,15 +8,11 @@ const Navbar = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
   
   return (
-  <nav className="bg-[#E9E2D0] py-4 sticky top-0 z-50 shadow-sm">
-    <div className="container-padding flex justify-between items-center">
-      <a href="#" className="text-2xl font-bold text-massage-primary">
-        <span>Cornelis Oosthuizen Massage Therapy</span>
-      </a>
-    </div>
-  </nav>
-);
-
+    <nav className="bg-[#E9E2D0] py-4 sticky top-0 z-50 shadow-sm">
+      <div className="container-padding flex justify-between items-center">
+        <a href="#" className="text-2xl font-bold text-massage-primary">
+          <span>Cornelis Oosthuizen - Fascia Release Therapy</span>
+        </a>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
@@ -37,15 +33,17 @@ const Navbar = () => {
           </Button>
         </div>
 
-       {/* Mobile Menu Button */}
-<div className="md:hidden">
-  <button className="text-massage-dark" onClick={toggleMenu}>
-    {isOpen ? <X size={24} /> : <Menu size={24} />}
-  </button>
-</div>
+        {/* Mobile Menu Button */}
+        <div className="md:hidden">
+          <button className="text-massage-dark" onClick={toggleMenu}>
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+      </div>
 
       {/* Mobile Navigation */}
-      {isOpen && <div className="md:hidden bg-[#E9E2D0] py-4 px-4">
+      {isOpen && (
+        <div className="md:hidden bg-[#E9E2D0] py-4 px-4">
           <div className="flex flex-col gap-4">
             <a href="#services" className="text-massage-dark hover:text-massage-primary transition-colors py-2 border-b" onClick={toggleMenu}>
               Services
@@ -63,7 +61,9 @@ const Navbar = () => {
               <a href="#contact">Contact Us</a>
             </Button>
           </div>
-        </div>}
-    </nav>;
+        </div>
+      )}
+    </nav>
+  );
 };
 export default Navbar;
