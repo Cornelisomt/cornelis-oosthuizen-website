@@ -77,13 +77,6 @@ const PriceCard = ({
   price,
   popular = false
 }: PriceCardProps) => {
-  const handleWhatsApp = () => {
-    window.open(
-      `https://wa.me/+27774849149?text=Hello%2C%20I%27d%20like%20to%20inquire%20about%20${title}%20fascia%20release%20therapy%20sessions.`,
-      "_blank"
-    );
-  };
-
   return (
     <Card className={`card-shadow ${popular ? 'border-2 border-massage-primary relative' : ''}`}>
       {popular && (
@@ -95,10 +88,7 @@ const PriceCard = ({
         <CardTitle>{title}</CardTitle>
       </CardHeader>
       <CardContent className="text-center pt-0">
-        <p className="text-3xl font-bold text-massage-primary mb-6">{price}</p>
-        <Button onClick={handleWhatsApp} className="w-full bg-massage-primary hover:bg-massage-primary/90">
-          Inquire on WhatsApp
-        </Button>
+        <p className="text-3xl font-bold text-massage-primary">{price}</p>
       </CardContent>
     </Card>
   );
